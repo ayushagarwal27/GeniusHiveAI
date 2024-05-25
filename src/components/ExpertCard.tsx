@@ -13,7 +13,7 @@ const ExpertCard: FC<ExpertCardProps> = ({ expertInfo }) => {
   return (
     <div
       className={
-        "bg-white/30 text-black flex flex-col gap-4 p-4 text-center cursor-pointer border border-gray-500 rounded-lg hover:-translate-y-2 transition hover:shadow-xl hover:shadow-gray-400   backdrop-filter backdrop-blur-lg bg-opacity-40"
+        "bg-transparent text-black flex flex-col gap-4 p-4 text-center cursor-pointer border border-gray-500 rounded-lg hover:-translate-y-2 transition hover:shadow-xl hover:shadow-gray-400   backdrop-filter backdrop-blur-lg bg-opacity-40"
       }
       onClick={() => router.push(`/expert/${expertInfo.name}`)}
     >
