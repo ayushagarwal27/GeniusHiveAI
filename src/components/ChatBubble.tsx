@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import Image from "next/image";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 interface ChatBubbleProps {
   text: string;
@@ -28,8 +30,16 @@ const ChatBubble: FC<ChatBubbleProps> = ({ text, type, expertImgUrl }) => {
                 />
               )}
             </div>
+
             <div className="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
-              {text}
+              {type == "expert" ? (
+                <TextGenerateEffect
+                  words={text}
+                  className={"text-black text-3xl"}
+                />
+              ) : (
+                text
+              )}
             </div>
           </div>
         </div>
