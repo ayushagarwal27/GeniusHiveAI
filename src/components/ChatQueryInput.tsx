@@ -5,22 +5,35 @@ interface ChatQueryInputProps {
   content: ContentState;
   setContent: (content: ContentState) => void;
   expertName: string;
+  setIsLoading: (state: boolean) => void;
+  isLoading: boolean;
 }
 
 const ChatQueryInput: FC<ChatQueryInputProps> = ({
   content,
   setContent,
   expertName,
+  isLoading,
+  setIsLoading,
 }) => {
   const [query, setQuery] = useState<string>("");
+
   const handleRequest = async (e: FormEvent) => {
+    if (isLoading) return;
     e.preventDefault();
-    const res = await fetch(
-      `http://localhost:8080/expert?expert=${expertName}&question=${query}`
-    );
-    const data = await res.json();
-    setContent([...content, { question: query!, answer: data.reply }]);
-    setQuery("");
+    setIsLoading(true);
+
+    try {
+      const res = await fetch(
+        `http://localhost:8080/expert?expert=${expertName}&question=${query}`
+      );
+      const data = await res.json();
+      setContent([...content, { question: query!, answer: data.reply }]);
+    } catch (err) {
+    } finally {
+      setQuery("");
+      setIsLoading(false);
+    }
   };
   return (
     <form
@@ -32,6 +45,7 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
           type="text"
           placeholder={"Type your query here ..."}
           value={query}
+          disabled={isLoading}
           className="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-8 md:h-10"
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -41,8 +55,9 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
         <button
           className="h-8 flex w-full items-center justify-center bg-gray-800  hover:bg-gray-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
           type={"submit"}
+          disabled={isLoading}
         >
-          <span>Send</span>
+          <span>{isLoading ? "Loading..." : "Send"}</span>
           <span className="ml-2">
             <svg
               className="w-4 h-4 transform rotate-45 -mt-px"

@@ -19,7 +19,7 @@ const ChatBubble: FC<ChatBubbleProps> = ({ text, type, expertImgUrl }) => {
       >
         <div className="col-start-1 col-end-12 lg:col-end-8 p-3 rounded-lg ">
           <div className="flex flex-row items-center ">
-            <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gray-800 text-gray-300 flex-shrink-0 overflow-hidden">
+            <div className="flex self-start md:items-center pt-1 justify-center h-10 w-10 rounded-full bg-gray-800 text-gray-300 flex-shrink-0 overflow-hidden">
               {type === "user" ? (
                 "Q"
               ) : (

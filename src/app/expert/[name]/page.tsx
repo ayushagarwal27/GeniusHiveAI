@@ -18,8 +18,10 @@ export type ContentState = {
 
 const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
   const [content, setContent] = useState<ContentState>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const expertName = parseExpertName(name);
   const expert = expertsData.find((el) => el.name === name);
+
   return (
     <>
       <img
@@ -52,6 +54,8 @@ const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
           content={content}
           setContent={setContent}
           expertName={expertName}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
         />
       </ChatContainer>
     </>
