@@ -8,7 +8,7 @@ interface ExpertCardProps {
   expertInfo: ExpertsDataType;
 }
 
-const ExpertCard: FC<ExpertCardProps> = ({ expertInfo, marginBottom }) => {
+const ExpertCard: FC<ExpertCardProps> = ({ expertInfo }) => {
   const router = useRouter();
   return (
     <div
