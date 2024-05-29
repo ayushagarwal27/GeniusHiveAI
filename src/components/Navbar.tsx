@@ -11,7 +11,7 @@ const Navbar = () => {
               <Link href={"/"} className={"font-bold cursor-pointer"}>
                 <span
                   className={
-                    "bg-green-100 p-2 rounded-full mr-1 text-green-900"
+                    "bg-green-100 p-2 rounded-full rounded-br-none mr-1 text-green-900"
                   }
                 >
                   G
