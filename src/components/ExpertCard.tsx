@@ -1,7 +1,7 @@
 "use client";
 import React, { FC } from "react";
 import { useRouter } from "next/navigation";
-import { ExpertsDataType } from "@/types/ExpertsTypes";
+import { ExpertsDataType } from "@/types/experts-types";
 import { parseExpertName } from "@/utils/general";
 
 interface ExpertCardProps {

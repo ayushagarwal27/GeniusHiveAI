@@ -30,6 +30,7 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
       const data = await res.json();
       setContent([...content, { question: query!, answer: data.reply }]);
     } catch (err) {
+      console.log(err);
     } finally {
       setQuery("");
       setIsLoading(false);

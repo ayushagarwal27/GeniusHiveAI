@@ -9,7 +9,14 @@ const Navbar = () => {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center justify-center text-white">
               <Link href={"/"} className={"font-bold cursor-pointer"}>
-                GENIUS HIVE AI
+                <span
+                  className={
+                    "bg-green-100 p-2 rounded-full mr-1 text-green-900"
+                  }
+                >
+                  G
+                </span>
+                ENIUS HIVE AI
               </Link>
             </div>
           </div>

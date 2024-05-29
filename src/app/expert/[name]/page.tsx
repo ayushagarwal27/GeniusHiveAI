@@ -5,7 +5,7 @@ import ChatBubble from "@/components/ChatBubble";
 import ChatContainer from "@/components/ChatContainer";
 import ChatQueryInput from "@/components/ChatQueryInput";
 import { parseExpertName } from "@/utils/general";
-import { ExpertMapper, expertsData } from "@/types/ExpertsTypes";
+import { ExpertMapper, expertsData } from "@/types/experts-types";
 
 interface ExpertPageProps {
   params: { name: ExpertMapper };
@@ -25,8 +25,8 @@ const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
   return (
     <>
       <img
-        className={"inline-block w-screen h-[300px] object-contain"}
-        src={expert?.content.imgUrl || ""}
+        className={"inline-block w-screen h-[300px] object-cover"}
+        src={expert?.content.bannerImg || expert?.content.imgUrl || ""}
         alt={"scientist image"}
       />
       <ChatContainer>
