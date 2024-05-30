@@ -22,9 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " relative"}>
         <Navbar />
-        <AuroraBackground className={"bg-green-900"}>
-          {children}
-        </AuroraBackground>
+        {children}
       </body>
     </html>
   );
