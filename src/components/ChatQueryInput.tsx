@@ -24,9 +24,10 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
     setIsLoading(true);
 
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_EXPERT_URL}?expert=${expertName}&question=${query}`
-      );
+      const res = await fetch(`${process.env.NEXT_PUBLIC_EXPERT_URL}`, {
+        method: "POST",
+        body: JSON.stringify({ expert: expertName, query }),
+      });
       const data = await res.json();
       setContent([...content, { question: query!, answer: data.reply }]);
     } catch (err) {
