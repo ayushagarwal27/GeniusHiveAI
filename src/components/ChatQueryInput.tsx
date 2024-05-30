@@ -19,7 +19,7 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
   const [query, setQuery] = useState<string>("");
 
   const handleRequest = async (e: FormEvent) => {
-    if (isLoading) return;
+    if (isLoading || query === "") return;
     e.preventDefault();
     setIsLoading(true);
 
