@@ -1,5 +1,6 @@
 import React, { FC, FormEvent, useState } from "react";
 import { ContentState } from "@/app/expert/[name]/page";
+import { headers } from "next/headers";
 
 interface ChatQueryInputProps {
   content: ContentState;
@@ -26,6 +27,7 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_EXPERT_URL}`, {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ expert: expertName, query }),
       });
       const data = await res.json();
