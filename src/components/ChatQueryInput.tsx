@@ -1,6 +1,5 @@
 import React, { FC, FormEvent, useState } from "react";
 import { ContentState } from "@/app/expert/[name]/page";
-import { headers } from "next/headers";
 
 interface ChatQueryInputProps {
   content: ContentState;
@@ -25,15 +24,14 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
     setIsLoading(true);
 
     try {
-      // const res = await fetch(`${process.env.NEXT_PUBLIC_EXPERT_URL}`, {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json", charset: "utf-8" },
-      //   body: JSON.stringify({ expert: expertName, query }),
-      // });
-      const res = await fetch(`${process.env.NEXT_PUBLIC_EXPERT_URL}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_EXPERT_URL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", charset: "utf-8" },
+        body: JSON.stringify({ expert: expertName, query }),
+      });
+
       const data = await res.json();
-      console.log(data);
-      // setContent([...content, { question: query!, answer: data.reply }]);
+      setContent([...content, { question: query!, answer: data.reply }]);
     } catch (err) {
       console.log(err);
     } finally {
