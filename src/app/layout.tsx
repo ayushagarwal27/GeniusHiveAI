@@ -6,9 +6,10 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Genius Hive",
+  title:
+    "Unlock the Genius Within: Engage with Legendary Scientists through GeniusHive",
   description:
-    "Welcome to GeniusHive, where the wisdom of the ages meets cutting-edge AI technology! Engage in intellectual discourse like never before with our app, where you can interact with virtual representations of history's greatest scientific minds. Have burning questions about the universe, biology, or technology? Pose them to our AI counterparts of luminaries such as Einstein, Curie, or Turing, and receive insightful responses rooted in their groundbreaking theories and discoveries. Whether you're a curious student or a seasoned scholar, GeniusHive provides a platform to delve into the minds of the world's most renowned scientists and explore the frontiers of human knowledge.",
+    "Explore the frontiers of science and technology by interacting with AI-powered virtual representations of history's greatest minds, including Einstein, Curie, and Turing. GeniusHive offers a unique platform to have your burning questions answered and delve into the world's most profound discoveries.",
 };
 
 export default function RootLayout({
