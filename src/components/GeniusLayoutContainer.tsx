@@ -1,8 +1,8 @@
 import React from "react";
-import ExpertCard from "@/components/ExpertCard";
-import { expertsData } from "@/types/experts-types";
+import GeniusCard from "@/components/GeniusCard";
+import { expertsData } from "@/data/geniusesData";
 
-const ExpertsLayoutContainer = () => {
+const GeniusLayoutContainer = () => {
   return (
     <div
       className={
@@ -10,10 +10,10 @@ const ExpertsLayoutContainer = () => {
       }
     >
       {expertsData.map((expert, index) => (
-        <ExpertCard key={index} expertInfo={expert} />
+        <GeniusCard key={index} expertInfo={expert} />
       ))}
     </div>
   );
 };
 
-export default ExpertsLayoutContainer;
+export default GeniusLayoutContainer;

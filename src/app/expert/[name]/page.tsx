@@ -1,11 +1,12 @@
 "use client";
 
 import React, { FC, useState } from "react";
-import ChatBubble from "@/components/ChatBubble";
-import ChatContainer from "@/components/ChatContainer";
-import ChatQueryInput from "@/components/ChatQueryInput";
-import { parseExpertName } from "@/utils/general";
-import { ExpertMapper, expertsData } from "@/types/experts-types";
+import ChatBubble from "@/components/chat/ChatBubble";
+import ChatContainer from "@/components/chat/ChatContainer";
+import ChatQueryInput from "@/components/chat/ChatQueryInput";
+import { parseExpertName } from "@/lib/utils/stringUtils";
+import { ExpertMapper, expertsData } from "@/data/geniusesData";
+import ProgressiveImage from "@/components/progressiveImage";
 
 interface ExpertPageProps {
   params: { name: ExpertMapper };
@@ -24,11 +25,13 @@ const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
 
   return (
     <>
-      <img
-        className={"inline-block w-screen h-[300px] object-cover"}
-        src={expert?.content.bannerImg || expert?.content.imgUrl || ""}
-        alt={"scientist image"}
-      />
+      <div className={"w-screen h-[300px] object-cover"}>
+        <ProgressiveImage
+          className={"w-full h-full object-cover"}
+          src={expert?.content.bannerImg || expert?.content.imgUrl || ""}
+          alt={"scientist image"}
+        />
+      </div>
       <ChatContainer>
         {content.map(({ question, answer }, i) => (
           <div

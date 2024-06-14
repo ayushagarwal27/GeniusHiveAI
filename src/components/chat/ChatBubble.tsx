@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import ProgressiveImage from "@/components/progressiveImage";
 
 interface ChatBubbleProps {
   text: string;
@@ -23,11 +23,13 @@ const ChatBubble: FC<ChatBubbleProps> = ({ text, type, expertImgUrl }) => {
               {type === "user" ? (
                 "Q"
               ) : (
-                <img
-                  src={expertImgUrl || ""}
-                  className={" w-full object-cover"}
-                  alt={"expert image"}
-                />
+                <div>
+                  <ProgressiveImage
+                    src={expertImgUrl || ""}
+                    className={"w-full object-cover object-center"}
+                    alt={"expert image"}
+                  />
+                </div>
               )}
             </div>
 
