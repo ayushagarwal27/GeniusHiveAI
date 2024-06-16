@@ -8,14 +8,14 @@ const Footer = () => {
     <footer className="bg-gray-800 fixed z-20 left-0 bottom-0 right-0">
       <div
         className={
-          "flex text-white flex-row justify-center gap-2 cursor-pointer py-5 "
+          "flex flex-row text-gray-200 justify-center gap-2 py-5 text-[18px] md:text-[20px]"
         }
       >
         Made with <FaHeart color={"green"} size={23} className={"mt-[2px]"} />{" "}
         by{" "}
         <Link
           href={"https://github.com/ayushagarwal27"}
-          className={"hover:text-blue-400"}
+          className={"hover:text-blue-400  cursor-pointer  underline"}
           target={"_blank"}
         >
           Ayush Agarwal
