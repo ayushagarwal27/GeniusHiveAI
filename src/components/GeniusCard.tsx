@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { ExpertsDataType } from "@/data/geniusesData";
-import { parseExpertName } from "@/lib/utils/stringUtils";
+import { parseExpertName } from "@/utils/stringUtils";
 import Link from "next/link";
 import ProgressiveImage from "@/components/progressiveImage";
 

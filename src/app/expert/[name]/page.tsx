@@ -4,7 +4,7 @@ import React, { FC, useState } from "react";
 import ChatBubble from "@/components/chat/ChatBubble";
 import ChatContainer from "@/components/chat/ChatContainer";
 import ChatQueryInput from "@/components/chat/ChatQueryInput";
-import { parseExpertName } from "@/lib/utils/stringUtils";
+import { parseExpertName } from "@/utils/stringUtils";
 import { ExpertMapper, expertsData } from "@/data/geniusesData";
 import ProgressiveImage from "@/components/progressiveImage";
 

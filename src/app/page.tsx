@@ -1,3 +1,4 @@
+"use client";
 import GeniusLayoutContainer from "@/components/GeniusLayoutContainer";
 import Footer from "@/components/Footer";
 import { AuroraBackground } from "@/components/ui/aurora-background";
