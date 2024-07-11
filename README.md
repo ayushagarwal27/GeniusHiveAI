@@ -8,13 +8,11 @@ Welcome to the  GeniusHive AI App! This application leverages cutting-edge AI te
 - **Personalized Responses:** Receive tailored responses based on the context of the conversation and your specific queries.
 - **Next.js Frontend:** Utilizes Next.js for fast and dynamic frontend development, ensuring a seamless user experience.
 - **Tailwind CSS Styling:** Stylish and responsive UI design created using Tailwind CSS, offering a visually appealing interface.
-- **Spring AI:** Leveraged SpringAI package for enhanced AI capabilities and improved conversation quality.
-- **Spring Boot Backend:** Built on top of Spring Boot for robust and scalable backend architecture.
+- **Vercel AI SDK:** Leveraged Vercel AI SDK package for enhanced AI capabilities and improved conversation quality.
 - **OpenAI APIs:** Harness the power of OpenAI's APIs for advanced natural language processing and understanding.
 
 ### Technologies Used:
-- **Frontend:** Next.js, Tailwind CSS [repo link](https://github.com/ayushagarwal27/expertAI-frontend)
-- **Backend:** Spring Boot, SpringAI [repo link](https://github.com/ayushagarwal27/expertAI)
+- **Stack:** Next.js, Tailwind CSS [repo link](https://github.com/ayushagarwal27/expertAI-frontend)
 - **AI Integration:** OpenAI APIs
 
 ### How to Use:
