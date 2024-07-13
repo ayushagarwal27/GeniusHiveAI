@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 fixed z-20 left-0 bottom-0 right-0">
+    <footer className="bg-gray-800/80 backdrop-blur fixed z-20 left-0 bottom-0 right-0">
       <div
         className={
           "flex flex-row text-gray-200 justify-center gap-2 py-5 text-[18px] md:text-[20px]"
