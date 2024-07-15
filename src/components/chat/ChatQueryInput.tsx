@@ -41,7 +41,7 @@ const ChatQueryInput: FC<ChatQueryInputProps> = ({
   return (
     <form
       onSubmit={handleRequest}
-      className="flex flex-col md:flex-row items-center min-h-16 rounded-xl bg-gray-100 gap-2 w-[85%] md:w-[94%] px-4 py-2 md:pt-0 mt-20 absolute md:bottom-2 -bottom-1 left-6 md:left-6"
+      className="container flex flex-col md:flex-row items-center min-h-16 rounded-xl bg-gray-100 gap-2 w-[85%] lg:w-[95%] 2xl:w-[75%] px-4 py-2 md:pt-0 mt-20 fixed bottom-2"
     >
       <div className="relative w-[80%] md:w-[100%]">
         <input

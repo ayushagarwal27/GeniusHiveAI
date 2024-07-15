@@ -24,7 +24,7 @@ const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
   const expert = expertsData.find((el) => el.name === name);
 
   return (
-    <>
+    <div className={'flex flex-col bg-gray-300 h-screen'}>
       <div className={"w-screen h-[300px] object-cover"}>
         <ProgressiveImage
           className={"w-full h-full object-cover"}
@@ -61,7 +61,7 @@ const ExpertPage: FC<ExpertPageProps> = ({ params: { name } }) => {
           setIsLoading={setIsLoading}
         />
       </ChatContainer>
-    </>
+    </div>
   );
 };
 
